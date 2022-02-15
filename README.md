@@ -1,2 +1,2 @@
 # LeetCode
-LeetCode routine using Golang
+LeetCode daily routine using Golang
