@@ -1,19 +1,19 @@
 type NumArray struct {
-	preSum []int
+	sumArr []int
 }
 
 func Constructor(nums []int) NumArray {
 	for i := 1; i < len(nums); i++ {
 		nums[i] += nums[i-1]
 	}
-	return NumArray{preSum: nums}
+	return NumArray{sumArr: nums}
 }
 
 func (this *NumArray) SumRange(left int, right int) int {
 	if left > 0 {
-		return this.preSum[right] - this.preSum[left-1]
+		return this.sumArr[right] - this.sumArr[left-1]
 	}
-	return this.preSum[right]
+	return this.sumArr[right]
 }
 
 /**
